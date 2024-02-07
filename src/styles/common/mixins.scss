@@ -1,0 +1,29 @@
+@mixin btn(
+  $width: 200px,
+  $size: 32px,
+  $color: $white,
+  $background: $blue,
+) {
+  width: $width;
+  padding: 15px;
+  font-size: $size;
+  color: $color;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: $background;
+  border: 2px solid $background;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba($background, 0.7);
+  }
+
+  &:disabled {
+    background-color: $white;
+    color: $dark;
+    border: 2px solid $dark;
+    pointer-events: none;
+  }
+}

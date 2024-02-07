@@ -8,7 +8,7 @@ export default defineConfig({
   resolve: {
     alias: [
       { find: '@', replacement: path.resolve(__dirname, 'src') },
-      { find: '@@', replacement: path.resolve(__dirname, 'src/assets') },
+      { find: '@@', replacement: path.resolve(__dirname, 'src/styles') },
     ],
   },
 })

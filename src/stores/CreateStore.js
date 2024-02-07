@@ -18,6 +18,9 @@ const useCreateStore = defineStore('createStore', () => {
   const submit = async (payload) => {
     const DOMAIN = authStore.getDomain
     const TOKEN = authStore.getToken
+
+    const url = `https://${DOMAIN}/api/v4/${payload}`
+    const body = {name: [payload]}
     const config = {
       headers: {
         'Content-Type': 'application/json',
@@ -27,11 +30,7 @@ const useCreateStore = defineStore('createStore', () => {
 
     try {
       setLoader(true)
-      const { data } = await axios.post(
-        `https://${DOMAIN}/api/v4/${payload}`,
-        { name: [payload] },
-        config
-      )
+      const { data } = await axios.post(url, body, config)
       const ids = data._embedded[payload].map((el) => el.id).join(' ')
       dataStore.addData({ id: ids, title: payload })
     } catch (e) {

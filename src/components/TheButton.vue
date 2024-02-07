@@ -1,6 +1,8 @@
 <template>
   <div>
-    <button class="btn" :disabled="isDisabled">Создать</button>
+    <button class="btn" :disabled="isDisabled" @click="$emit('submit')">
+      Создать
+    </button>
   </div>
 </template>
 
@@ -9,9 +11,10 @@ export default {
   props: {
     isDisabled: {
       type: Boolean,
-      default: true
-    }
+      default: true,
+    },
   },
+  emit: ['submit'],
 }
 </script>
 

@@ -1,9 +1,9 @@
 <template>
   <div>
     <label class="" for="select">Выберите:</label>
-    
-    <select id="select" class="" :value="modelValue" @change="$emit('update:modelValue', $event.target.value)">
-      <option v-for="option in options" :value="option.value" :key="value">
+
+    <select id="select" class="" :value="modelValue" @change="changeSelect">
+      <option v-for="option in options" :value="option.value" :key="option.title">
         {{ option.title }}
       </option>
     </select>
@@ -17,13 +17,20 @@ export default {
   props: {
     modelValue: {
       type: String,
-      default: ''
+      default: '',
     },
   },
   emit: ['update:modelValue'],
 
-  setup() {
-    return { options }
+  setup(_, context) {
+    const changeSelect = (e) => {
+      context.emit('update:modelValue', e.target.value)
+    }
+
+    return { 
+      options,
+      changeSelect
+    }
   },
 }
 </script>

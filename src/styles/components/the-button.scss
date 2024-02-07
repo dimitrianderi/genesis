@@ -1,3 +1,5 @@
-.btn {
-  @include btn();
+.button {
+  &__btn {
+    @include btn();
+  }
 }

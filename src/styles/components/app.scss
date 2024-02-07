@@ -1,5 +1,21 @@
 .app {
-  width: 1200px;
-  margin: 0 auto;
-  border: 1px solid red;
+  @include flex(_, _, start);
+  width: 1000px;
+  height: 500px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: $cream;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid $brown;
+
+  &__aside {
+    @include flex(column);
+    width: 40%;
+    height: 100%;
+    padding: 30px;
+    background-color: $brown;
+  }
 }

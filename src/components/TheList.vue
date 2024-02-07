@@ -1,16 +1,16 @@
 <template>
-  <div>
-    <table>
-      <thead>
+  <div class="list">
+    <table class="list__table">
+      <thead class="list__table-thead">
         <tr>
-          <th>Id</th>
-          <th>Сущность</th>
+          <th class="list__table-t">Id</th>
+          <th class="list__table-t">Сущность</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody class="list__table-tbody">
         <tr v-for="item in items" :key="item.id">
-          <td>{{ item.id }}</td>
-          <td>{{ getOption(item.title) }}</td>
+          <td class="list__table-t">{{ item.id }}</td>
+          <td class="list__table-t">{{ getOption(item.title) }}</td>
         </tr>
       </tbody>
     </table>

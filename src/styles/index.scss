@@ -1,8 +1,14 @@
 // common
-@import '@@/common/mixins.scss';
+@import '@@/common/normalize.scss';
 @import '@@/common/variables.scss';
+@import '@@/common/mixins.scss';
+@import '@@/common/default.scss';
 
 // components
 @import '@@/components/app.scss';
 @import '@@/components/the-select.scss';
 @import '@@/components/the-button.scss';
+@import '@@/components/the-list.scss';
+
+// components
+@import '@@/ui/app-loader.scss';

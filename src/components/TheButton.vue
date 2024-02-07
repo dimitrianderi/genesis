@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <button class="btn" :disabled="isDisabled" @click="$emit('submit')">
+  <div class="button">
+    <button class="button__btn" :disabled="isDisabled" @click="$emit('submit')">
       Создать
     </button>
   </div>

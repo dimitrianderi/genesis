@@ -11,12 +11,12 @@
 
 <script>
 import { computed, onMounted, ref } from 'vue'
+import TheList from '@/components/TheList.vue'
 import TheSelect from '@/components/TheSelect.vue'
 import TheButton from '@/components/TheButton.vue'
-import useCreateStore from '@/stores/CreateStore'
-import useAuthStore from '@/stores/AuthStore'
-import TheList from '@/components/TheList.vue'
 import AppLoader from '@/components/ui/AppLoader.vue'
+import useAuthStore from '@/stores/AuthStore'
+import useCreateStore from '@/stores/CreateStore'
 
 export default {
   components: { TheSelect, TheButton, TheList, AppLoader },

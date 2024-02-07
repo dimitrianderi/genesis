@@ -1,10 +1,19 @@
 <template>
-  <h1>test</h1>
+  <the-select v-model="option"></the-select>
 </template>
 
 <script>
+import TheSelect from '@/components/TheSelect.vue'
+import { ref } from 'vue'
 export default {
+  components: { TheSelect },
+  setup() {
+    const option = ref('')
 
+    return {
+      option
+    }
+  }
 }
 </script>
 
